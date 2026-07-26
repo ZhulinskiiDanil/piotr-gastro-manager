@@ -42,10 +42,8 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    smtpHost: '',
-    smtpPort: '',
-    smtpUser: '',
-    smtpPassword: '',
+    resendApiKey: '',
+    resendFrom: 'GASTROManager <onboarding@resend.dev>',
     contactEmail: '',
   },
 });

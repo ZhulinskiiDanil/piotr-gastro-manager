@@ -6,6 +6,10 @@
     'Optymalizacja procesów',
     'Kontrola kosztów',
     'Rozwój biznesu',
+    'Tajemniczy klient',
+    'Food Cost',
+    'Tworzenie siatki delivery',
+    'Rentowność lokalu',
   ];
 </script>
 

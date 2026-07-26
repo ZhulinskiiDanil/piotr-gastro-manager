@@ -9,7 +9,7 @@
       label: 'lat na stanowiskach managerskich',
     },
     {
-      value: '4',
+      value: '5',
       label: 'restauracje w jednej sieci',
     },
     {
@@ -18,32 +18,44 @@
     },
   ];
 
-  const career = [
+  interface CareerItem {
+    company: string;
+    location?: string;
+    position: string;
+    period?: string;
+    description?: string;
+    details?: string[];
+  }
+
+  const career: CareerItem[] = [
     {
       company: 'Ganesh – Kuchnia Indyjska',
       location: 'Łódź',
       position: 'Kierowca',
-      period: 'ok. 1,5 roku',
-      description: '',
     },
     {
       company: 'Cochise Burger',
-      location: '',
       position: 'Od kierowcy do General Managera',
-      period: '',
       description:
-        'Po pół roku awansowałem na pierwszego managera w firmie, a po trzech latach zostałem pierwszym General Managerem, zarządzającym siecią czterech lokali. Współtworzyłem rozwój sieci z 2 do 5 lokali własnych oraz nadzorowałem 2 lokale franczyzowe.',
+        'Po pół roku zostałem pierwszym managerem w firmie, a po czterech latach objąłem stanowisko pierwszego General Managera, zarządzając siecią pięciu lokali. Współtworzyłem rozwój sieci z dwóch do pięciu lokali własnych oraz nadzorowałem dwa lokale franczyzowe.',
     },
     {
       company: 'Współpraca z markami gastronomicznymi',
-      location: '',
       position: 'Ostatnie 1,5 roku',
-      period: '',
+      details: [
+        'Bar na Króla',
+        'Da Grasso – 5 lokali franczyzowych',
+        'Bar Mleczny „Delicje”',
+        'GOM Owczarek – współpraca przy otwarciu nowego konceptu restauracyjnego połączonego z piekarnią i cukiernią',
+      ],
+    },
+    {
+      company: 'Kuchnia Marché',
+      position: 'Obecnie',
       description:
-        'Współpracowałem z markami gastronomicznymi, takimi jak Da Grasso, Bar Mleczny Delicje, Bar na Króla, GOM Owczarek, a obecnie z Kuchnią Marché, gdzie odpowiadam za zarządzanie dwoma restauracjami, cateringiem oraz siecią automatów vendingowych.',
+        'Odpowiadam za zarządzanie dwoma restauracjami, cateringiem oraz siecią automatów vendingowych.',
     },
   ];
-
   const certificates = [
     'Gastro Manager – Akademia Gastronomii',
     'Gastro Manager – Poziom II – Akademia Gastronomii',
@@ -112,6 +124,12 @@
               <p class="experience__position">
                 {{ item.position }}
               </p>
+
+              <ul v-if="item.details?.length" class="experience__timeline-details">
+                <li v-for="detail in item.details" :key="detail">
+                  {{ detail }}
+                </li>
+              </ul>
 
               <p v-if="item.description" class="experience__timeline-description">
                 {{ item.description }}
@@ -346,6 +364,33 @@
       color: $color-brown;
       font-size: 1.125rem;
       line-height: 1.6;
+    }
+
+    &__timeline-details {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 1.5rem;
+        color: $color-brown;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        &::before {
+          position: absolute;
+          top: 0.625rem;
+          left: 0;
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background: $color-purple;
+          content: '';
+        }
+      }
     }
 
     &__certificates-title {
