@@ -18,14 +18,14 @@
         </span>
       </div>
 
-      <a class="footer__contact" href="tel:+48999999999">
+      <a class="footer__contact" href="tel:+48730242142">
         <Phone class="footer__icon" :stroke-width="2" />
-        <span>+48 999 999 999</span>
+        <span>+48 730 242 142</span>
       </a>
 
       <a class="footer__contact" href="mailto:zmywak@gmail.pl">
         <AtSign class="footer__icon" :stroke-width="2" />
-        <span>zmywak@gmail.pl</span>
+        <span>gastromanager91@gmail.com</span>
       </a>
     </div>
 

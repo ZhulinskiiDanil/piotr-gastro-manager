@@ -78,7 +78,6 @@
     overflow: hidden;
     color: $color-white;
     background: url('/images/hero/hero-background.webp') center 15% / cover no-repeat;
-    background-size: 100%;
 
     // Локальное затемнение за центральным контентом
     &::after {

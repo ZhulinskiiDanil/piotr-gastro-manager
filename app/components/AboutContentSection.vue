@@ -129,7 +129,7 @@
       width: 25rem; // 400px
       height: 35.375rem; // 566px
       object-fit: contain;
-      transform: translate(-50%, -42%);
+      transform: translate(-55%, -38%);
     }
 
     &__body {
