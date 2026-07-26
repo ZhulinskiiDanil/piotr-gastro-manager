@@ -69,13 +69,15 @@
   .hero {
     position: relative;
     isolation: isolate;
-    height: 820px;
+    min-height: 60rem;
     overflow: hidden;
     color: $color-white;
-    background: url('/images/hero/hero-background.webp') center 30% / cover no-repeat;
+    background: url('/images/hero/hero-background.webp') 70% -30% / cover no-repeat;
+    background-size: 110%;
 
     // Локальное затемнение за центральным контентом
     &::after {
+      content: '';
       position: absolute;
       z-index: 0;
       top: 50%;
@@ -84,10 +86,11 @@
       height: 400px;
       border-radius: 50%;
       background: $color-black-50;
-      content: '';
-      filter: blur(100px);
-      pointer-events: none;
+      opacity: 0.4;
       transform: translate(-50%, -50%);
+
+      pointer-events: none;
+      filter: blur(100px);
     }
 
     &__overlay {
@@ -137,6 +140,7 @@
 
     &__description {
       margin-top: 7px;
+      max-width: 480px;
       color: $color-white-85;
       font-family: $font-roboto;
       font-size: 16px;
