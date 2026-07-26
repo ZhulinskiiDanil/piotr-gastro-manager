@@ -69,11 +69,16 @@
   .hero {
     position: relative;
     isolation: isolate;
-    min-height: 60rem;
+    width: 100%;
+    height: auto;
+    min-height: 40rem;
+    max-height: 51.25rem;
+    aspect-ratio: 1920 / 820;
+
     overflow: hidden;
     color: $color-white;
-    background: url('/images/hero/hero-background.webp') 70% -30% / cover no-repeat;
-    background-size: 110%;
+    background: url('/images/hero/hero-background.webp') center 15% / cover no-repeat;
+    background-size: 100%;
 
     // Локальное затемнение за центральным контентом
     &::after {
@@ -102,36 +107,35 @@
     }
 
     &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       position: absolute;
       z-index: 2;
-      top: 49%;
+      top: 43%;
       left: 50%;
-      display: flex;
-      width: min(100% - 40px, 900px);
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+      width: min(100% - 4rem, 44rem);
       transform: translate(-50%, -50%);
     }
 
     &__logo {
-      width: 174px;
-      height: 174px;
-      margin-bottom: 23px;
+      width: 7.5rem; // 120px
+      height: 7.5rem;
+      margin-bottom: 0.75rem;
       object-fit: contain;
     }
 
     &__title {
       margin: 0;
       font-family: $font-frutiger;
-      font-size: 64px;
+      font-size: clamp(2.5rem, 2vw, 4rem);
       font-weight: 700;
       line-height: 1;
       letter-spacing: -1.3px;
     }
 
     &__subtitle {
-      margin-top: 27px;
+      margin-top: 1rem;
       font-family: $font-roboto;
       font-size: 24px;
       font-weight: 600;
@@ -139,13 +143,14 @@
     }
 
     &__description {
-      margin-top: 7px;
+      margin-top: 0.375rem;
       max-width: 480px;
       color: $color-white-85;
       font-family: $font-roboto;
       font-size: 16px;
       font-weight: 400;
       line-height: 1.4;
+      text-align: center;
     }
 
     &__button {
@@ -154,7 +159,7 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      margin-top: 17px;
+      margin-top: 0.75rem;
       padding: 10px 15px;
       border: 0;
       color: $color-brown-warm;
