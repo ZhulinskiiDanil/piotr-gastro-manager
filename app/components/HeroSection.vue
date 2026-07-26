@@ -24,7 +24,7 @@
 
       <p class="hero__subtitle">Doradztwo i optymalizacja gastronomii</p>
 
-      <p class="hero__description">Pomagam restauracjom działać lepiej i efektywniej</p>
+      <p class="hero__description">pomagam restauracjom i lokalom gastronomicznym</p>
 
       <a class="hero__button" href="#contact">
         Kontakt z managerem
