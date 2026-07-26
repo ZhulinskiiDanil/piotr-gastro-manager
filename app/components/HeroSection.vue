@@ -24,7 +24,10 @@
 
       <p class="hero__subtitle">Doradztwo i optymalizacja gastronomii</p>
 
-      <p class="hero__description">pomagam restauracjom i lokalom gastronomicznym</p>
+      <p class="hero__description">
+        Pomagam restauracjom i lokalom gastronomicznym zwiększać rentowność, optymalizować procesy i
+        rozwijać zespoły
+      </p>
 
       <a class="hero__button" href="#contact">
         Kontakt z managerem
